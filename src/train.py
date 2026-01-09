@@ -5,7 +5,7 @@ import tensorflow as tf
 
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
-from src.config import (
+from src.utils.config import (
     SYMBOL,
     FEATURES,
     TRAIN_SPLIT,
@@ -14,9 +14,9 @@ from src.config import (
     SEED,
     VAL_SPLIT,
 )
-from src.dataset import create_sequences
-from src.model import build_lstm
-from src.preprocessing import scale_train_test
+from src.utils.dataset import create_sequences
+from src.utils.model import build_lstm
+from src.utils.preprocessing import scale_train_test
 from src.tests.validation import validate_raw_data
 
 param_grid = {

@@ -3,8 +3,8 @@ import time
 from fastapi import FastAPI, HTTPException
 from prometheus_fastapi_instrumentator import Instrumentator
 
-from src.schemas import PredictionRequest, PredictionResponse
-from src.inference import predict_from_close
+from src.utils.schemas import PredictionRequest, PredictionResponse
+from src.utils.inference import predict_from_close
 from src.utils.logging import log_resource_usage
 
 app = FastAPI(
