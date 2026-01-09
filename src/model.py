@@ -1,16 +1,21 @@
+import tensorflow as tf
+
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 
 
-def build_lstm(input_shape):
-    model = Sequential(
+def build_lstm(input_shape, units, dropout, learning_rate):
+    model = tf.keras.Sequential(
         [
-            LSTM(64, return_sequences=True, input_shape=input_shape),
-            Dropout(0.2),
-            LSTM(64),
-            Dropout(0.2),
-            Dense(1),
+            tf.keras.layers.LSTM(units, input_shape=input_shape),
+            tf.keras.layers.Dropout(dropout),
+            tf.keras.layers.Dense(1),
         ]
     )
-    model.compile(optimizer="adam", loss="mse")
+
+    model.compile(
+        optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
+        loss="mse",
+    )
+
     return model
