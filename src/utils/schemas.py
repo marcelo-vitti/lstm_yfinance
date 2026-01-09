@@ -12,3 +12,4 @@ class PredictionRequest(BaseModel):
 class PredictionResponse(BaseModel):
     predicted_log_return: float
     predicted_price: float
+    latency_ms: float

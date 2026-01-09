@@ -3,7 +3,7 @@ import joblib
 
 from tensorflow.keras.models import load_model
 
-from src.config import LOOKBACK
+from src.utils.config import LOOKBACK
 
 
 MODEL_PATH = "models/lstm_visa_vus.h5"

@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.config import SYMBOL
+from src.utils.config import SYMBOL
 
 url = f"https://stooq.com/q/d/l/?s={SYMBOL}&i=d"
 
