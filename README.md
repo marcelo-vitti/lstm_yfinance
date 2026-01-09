@@ -124,3 +124,11 @@ MONITORAMENTO EM PRODUÇÃO
 Inclui métricas de:
 - tempo de resposta
 - uso de CPU e memória
+
+----------------------------------------------------------------
+
+PARA TESTE:
+
+uvicorn src.app:app --reload
+
+Após isso basta realizar uma requisição em http://127.0.0.1:8000/predict passando no body os valores de fechamento base.
